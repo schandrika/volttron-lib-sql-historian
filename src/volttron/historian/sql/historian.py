@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- {{{
 # vim: set fenc=utf-8 ft=python sw=4 ts=4 sts=4 et:
 #
-# Copyright 2020, Battelle Memorial Institute.
+# Copyright 2022, Battelle Memorial Institute.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -41,10 +41,10 @@ import logging
 import sys
 import threading
 
-from volttron.platform.agent import utils
-from volttron.platform.agent.base_historian import BaseHistorian
-from volttron.platform.dbutils import sqlutils
-from volttron.utils.docs import doc_inherit
+from volttron import utils
+from volttron.historian.base import BaseHistorian
+from volttron.historian.sql import sqlutils
+#from volttron.utils. import doc_inherit
 
 __version__ = "4.0.0"
 
@@ -157,11 +157,11 @@ class SQLHistorian(BaseHistorian):
         """
         self.bg_thread_dbutils.manage_db_size(history_limit_timestamp, storage_limit_gb)
 
-    @doc_inherit
+    #@doc_inherit
     def version(self):
         return __version__
 
-    @doc_inherit
+    #@doc_inherit
     def publish_to_historian(self, to_publish_list):
         try:
             published = 0
@@ -241,7 +241,7 @@ class SQLHistorian(BaseHistorian):
             # Raise to the platform so it is logged properly.
             raise
 
-    @doc_inherit
+    #@doc_inherit
     def query_topic_list(self):
 
         _log.debug("query_topic_list Thread is: {}".format(threading.currentThread().getName()))
@@ -251,11 +251,11 @@ class SQLHistorian(BaseHistorian):
             # No topics present.
             return []
 
-    @doc_inherit
+    #@doc_inherit
     def query_topics_by_pattern(self, topic_pattern):
         return self.main_thread_dbutils.query_topics_by_pattern(topic_pattern)
 
-    @doc_inherit
+    #@doc_inherit
     def query_topics_metadata(self, topics):
         meta = {}
         if isinstance(topics, str):
@@ -272,7 +272,7 @@ class SQLHistorian(BaseHistorian):
     def query_aggregate_topics(self):
         return self.main_thread_dbutils.get_agg_topics()
 
-    @doc_inherit
+    #@doc_inherit
     def query_historian(self, topic, start=None, end=None, agg_type=None, agg_period=None, skip=0, count=None,
                         order="FIRST_TO_LAST"):
         _log.debug("query_historian Thread is: {}".format(threading.currentThread().getName()))
@@ -336,7 +336,7 @@ class SQLHistorian(BaseHistorian):
                 results = dict()
         return results
 
-    @doc_inherit
+    #@doc_inherit
     def historian_setup(self):
         thread_name = threading.currentThread().getName()
         _log.info("historian_setup on Thread: {}".format(thread_name))
