@@ -1,11 +1,14 @@
 # VOLTTRON SQL Historian
 
-[![ci](https://github.com/VOLTTRON/volttron-sql-historian/workflows/ci/badge.svg)](https://github.com/VOLTTRON/volttron-sql-historian/actions?query=workflow%3Aci)
-[![documentation](https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat)](https://VOLTTRON.github.io/volttron-sql-historian/)
-[![pypi version](https://img.shields.io/pypi/v/volttron-sql-historian.svg)](https://pypi.org/project/volttron-sql-historian/)
+[![ci](https://github.com/VOLTTRON/volttron-sql-historian/workflows/ci/badge.svg)](https://github.com/eclipse-volttron/volttron-lib-sql-historian/actions?query=workflow%3Aci)
+[![documentation](https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat)](https://VOLTTRON.github.io/volttron-lib-sql-historian/)
+[![pypi version](https://img.shields.io/pypi/v/volttron-sql-historian.svg)](https://pypi.org/project/volttron-lib-sql-historian/)
 
 
-None
+Generic SQL Historian library that can be used to implement a historian agent with a relational database backend. 
+This library cannot be installed as a VOLTTRON agent as is. Only a concrete database implementation package such as 
+[sqlite-historian](https://github.com/eclipse-volttron/volttron-sqlitehistorian) that depends on this library can be 
+installed as a VOLTTRON agent.
 
 ## Prerequisites
 
@@ -114,4 +117,4 @@ The html files will be located in `~<path to agent project directory>/docs/build
 open <path to agent project directory>/docs/build/html/index.html
 ```
 
-This will open the documentation landing page in your default browsert (e.g. Chrome, Firefox).
+This will open the documentation landing page in your default browser (e.g. Chrome, Firefox).
