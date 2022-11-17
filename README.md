@@ -20,6 +20,29 @@ historian agent that uses this library will automatically install it as part of 
 installing [SQLiteHistorian](https://github.com/eclipse-volttron/volttron-sqlitehistorian) will automatically install 
 volttron-lib-sql-historian
 
+## Development
+
+Development requires poetry 1.2.2 or greater be used.  
+One can install it from https://python-poetry.org/docs/#installation.  The VOLTTRON team prefers to have the python 
+environments created within the project directory.  Execute this command to make that behavior the default.
+
+```shell
+poetry config virtualenvs.in-project true
+```
+
+Clone the repository.
+
+```shell
+git clone https://github.com/eclipse-volttron/volttron-lib-sql-historian
+```
+
+Change to the repository directory and use poetry install to setup the environment.
+
+```shell
+cd volttron-lib-sql-historian
+poetry install
+```
+
 ### Building Wheel
 
 To build a wheel from this project execute the following:
