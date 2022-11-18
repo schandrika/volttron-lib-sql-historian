@@ -39,7 +39,7 @@ import inspect
 import logging
 
 from volttron import utils
-from volttron.historian.sql import DbDriver
+from historian.sql import DbDriver
 
 utils.setup_logging()
 _log = logging.getLogger(__name__)
@@ -47,7 +47,7 @@ _log = logging.getLogger(__name__)
 
 def get_dbfuncts_class(database_type):
     mod_name = database_type + "functs"
-    mod_name_path = f"volttron.historian.{database_type}.{mod_name}"
+    mod_name_path = f"historian.{database_type}.{mod_name}"
     loaded_mod = __import__(mod_name_path, fromlist=[mod_name])
     for _, cls in inspect.getmembers(loaded_mod):
         # Ensure class is not the root dbdriver

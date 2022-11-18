@@ -43,7 +43,7 @@ None
 """
 
 from typing import List
-from volttron.historian.sql.basedb import DbDriver
+from historian.sql.basedb import DbDriver
 
 __all__: List[str] = [
     "DbDriver",

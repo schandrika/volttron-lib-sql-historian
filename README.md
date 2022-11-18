@@ -42,6 +42,11 @@ Change to the repository directory and use poetry install to setup the environme
 cd volttron-lib-sql-historian
 poetry install
 ```
+To create a new relational database based historian by extending this library, subclass 
+[DBDriver](https://github.com/eclipse-volttron/volttron-lib-sql-historian/blob/develop/src/historian/sql/basedb.py#L79).
+The subclass should be in a module historian.<database_type>.<database_type>functs.py for it to be dynamically loaded 
+by the base DBDriver. Please refer to [SQLiteHistorian](https://github.com/eclipse-volttron/volttron-sqlitehistorian) as 
+an example
 
 ### Building Wheel
 

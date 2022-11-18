@@ -42,8 +42,8 @@ import sys
 import threading
 
 from volttron import utils
-from volttron.historian.base import BaseHistorian
-from volttron.historian.sql import sqlutils
+from historian.base import BaseHistorian
+from historian.sql import sqlutils
 #from volttron.utils. import doc_inherit
 
 __version__ = "4.0.0"
