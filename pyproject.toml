@@ -8,9 +8,9 @@ toml = ">=0.10.2"
 
 [tool.poetry]
 name = "volttron-lib-sql-historian"
-version = "0.1.0"
-description = "None"
-authors = ["VOLTTRON <volttron@pnnl.gov>"]
+version = "0.2.0-rc"
+description = "A library for supporting sql based historians."
+authors = ["VOLTTRON Team <volttron@pnnl.gov>"]
 license = "Apache License 2.0"
 readme = "README.md"
 repository = "https://github.com/eclipse-volttron/volttron-lib-sql-historian"
