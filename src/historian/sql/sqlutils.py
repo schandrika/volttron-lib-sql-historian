@@ -22,39 +22,26 @@
 # ===----------------------------------------------------------------------===
 # }}}
 
-# Configuration file for the Sphinx documentation builder.
+import inspect
+import logging
 
-# -- Project information
+from volttron import utils
+from historian.sql import DbDriver
 
-project = 'VOLTTRON SQL Historian'
-copyright = '2022, PNNL'
-author = 'PNNL'
+utils.setup_logging()
+_log = logging.getLogger(__name__)
 
-release = '0.1'
-version = '0.1.0'
 
-# -- General configuration
-
-extensions = [
-    'sphinx.ext.duration',
-    'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.intersphinx',
-]
-
-intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
-}
-intersphinx_disabled_domains = ['std']
-
-templates_path = ['_templates']
-
-# -- Options for HTML output
-
-html_theme = 'sphinx_rtd_theme'
-
-# -- Options for EPUB output
-# epub_show_urls = 'footnote'
-
+def get_dbfuncts_class(database_type):
+    mod_name = database_type + "functs"
+    mod_name_path = f"historian.{database_type}.{mod_name}"
+    loaded_mod = __import__(mod_name_path, fromlist=[mod_name])
+    for _, cls in inspect.getmembers(loaded_mod):
+        # Ensure class is not the root dbdriver
+        if (inspect.isclass(cls) and issubclass(cls, DbDriver)
+                and cls is not DbDriver):
+            break
+    else:
+        raise Exception('Invalid module named {}'.format(mod_name_path))
+    _log.debug('Historian using module: {}'.format(cls.__name__))
+    return cls
