@@ -8,9 +8,9 @@ toml = ">=0.10.2"
 
 [tool.poetry]
 name = "volttron-lib-sql-historian"
-version = "0.1.0"
-description = "None"
-authors = ["VOLTTRON <volttron@pnnl.gov>"]
+version = "0.2.0-rc"
+description = "A library for supporting sql based historians."
+authors = ["VOLTTRON Team <volttron@pnnl.gov>"]
 license = "Apache License 2.0"
 readme = "README.md"
 repository = "https://github.com/eclipse-volttron/volttron-lib-sql-historian"
@@ -20,7 +20,7 @@ packages = [ { include = "historian", from = "src" } ]
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
-volttron-lib-base-historian = "^0.1.1a4"
+volttron-lib-base-historian = "^0.2.0rc0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^6.2.5"
