@@ -1,5 +1,5 @@
-[![pypi version](https://img.shields.io/pypi/v/volttron-sql-historian.svg)](https://pypi.org/project/volttron-lib-sql-historian/)
-![Passing?](https://github.com/VOLTTRON/volttron-sql-historian/actions/workflows/run-tests.yml/badge.svg)
+[![pypi version](https://img.shields.io/pypi/v/volttron-lib-sql-historian.svg)](https://pypi.org/project/volttron-lib-sql-historian/)
+![Passing?](https://github.com/VOLTTRON/volttron-lib-sql-historian/actions/workflows/run-tests.yml/badge.svg)
 
 Generic SQL Historian library that can be used to implement a historian agent with a relational database backend.
 This library cannot be installed as a VOLTTRON agent as is. Only a concrete database implementation package such as
