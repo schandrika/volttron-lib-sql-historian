@@ -8,7 +8,7 @@ installed as a VOLTTRON agent.
 
 ## Requirements
 
- - Python >= 3.8
+ - Python >= 3.10
 
 ## Installation
 
