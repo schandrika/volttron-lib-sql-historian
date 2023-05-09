@@ -14,7 +14,6 @@ env:
   LC_ALL: en_US.utf-8
   PYTHON_VERSION: '3.10'
   PROJECT_NAME: volttron-lib-sql-historian
-  POETRY_VERSION: '1.2.2'
 
 jobs:
 
