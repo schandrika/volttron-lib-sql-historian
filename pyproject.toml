@@ -16,7 +16,7 @@ packages = [ { include = "historian", from = "src" } ]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
-volttron-lib-base-historian = "^0.2.0rc0"
+volttron-lib-base-historian = "^0.2.0rc3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^6.2.5"
