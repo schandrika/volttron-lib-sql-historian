@@ -14,11 +14,11 @@ env:
   LC_ALL: en_US.utf-8
   PYTHON_VERSION: '3.10'
   PROJECT_NAME: volttron-lib-sql-historian
-  POETRY_VERSION: '1.2.2'
 
 jobs:
 
   deploy-pre-release:
+    if: github.ref_name != 'main'
     runs-on: ubuntu-22.04
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."

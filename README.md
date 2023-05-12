@@ -1,3 +1,6 @@
+[![Eclipse VOLTTRON™](https://img.shields.io/badge/Eclips%20VOLTTRON--red.svg)](https://volttron.readthedocs.io/en/latest/)
+![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)
+![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)
 [![pypi version](https://img.shields.io/pypi/v/volttron-lib-sql-historian.svg)](https://pypi.org/project/volttron-lib-sql-historian/)
 ![Passing?](https://github.com/VOLTTRON/volttron-lib-sql-historian/actions/workflows/run-tests.yml/badge.svg)
 
@@ -8,7 +11,7 @@ installed as a VOLTTRON agent.
 
 ## Requirements
 
- - Python >= 3.8
+ - Python >= 3.10
 
 ## Installation
 
